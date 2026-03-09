@@ -1,7 +1,7 @@
 # APEX Platform: Advanced AI Meta-Orchestration Command Center
 
 <div align="center">
-  <img src="assets/image1.png" alt="APEX Dashboard Overview" width="100%">
+  <img src="assets/image3.png" alt="APEX Dashboard Overview" width="100%">
   <br>
   <em>Futuristic Command Center inspired by high-performance technical interfaces.</em>
 </div>
@@ -75,7 +75,7 @@ The dashboard features dynamic, panning Recharts visualizations that track:
 - **Economic Impact**: Cumulative cost savings achieved by the AI Cost Router.
 
 ### 2. Deep-Dive Observability (Thought Streams)
-<img src="assets/image3.png" alt="Agent Detailed Terminal" width="100%">
+<img src="assets/image1.png" alt="Agent Detailed Terminal" width="100%">
 By clicking any agent in the registry, users can pop the **Agent Detail Modal**. This features:
 - **Glassmorphic Blur**: High-fidelity technical UI.
 - **Live Thought Stream**: A scrolling terminal that shows the raw, sub-second logs of the agent's internal logic, API calls, and decision-making steps.
