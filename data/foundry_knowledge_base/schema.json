@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Foundry Knowledge Base Schema",
+    "description": "Schema for storing optimization patterns and best practices for APEX ecosystem.",
+    "type": "object",
+    "properties": {
+        "pattern_id": {
+            "type": "string",
+            "description": "Unique identifier for the optimization pattern"
+        },
+        "category": {
+            "type": "string",
+            "enum": [
+                "prompt_engineering",
+                "model_routing",
+                "caching",
+                "agent_collaboration"
+            ],
+            "description": "Category of optimization"
+        },
+        "description": {
+            "type": "string",
+            "description": "Detailed narrative of the pattern"
+        },
+        "foundry_iq_tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Tags for Foundry IQ indexing"
+        },
+        "cost_savings_estimate": {
+            "type": "number",
+            "description": "Estimated cost savings as percentage (e.g., 0.15 for 15%)"
+        }
+    },
+    "required": [
+        "pattern_id",
+        "category",
+        "description"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "api_version": "2026-02-15-preview",
+    "base_url": "https://foundry.microsoft.com/api/v1",
+    "endpoints": {
+        "model_router": {
+            "path": "/router/completions",
+            "method": "POST",
+            "description": "Intelligently routes queries to optimal models based on cost, latency, and capabilities."
+        },
+        "foundry_iq": {
+            "path": "/knowledge/query",
+            "method": "POST",
+            "description": "Queries the Foundry IQ knowledge base using RAG."
+        },
+        "control_plane": {
+            "path": "/control/governance/check",
+            "method": "POST",
+            "description": "Validates requests against governance policies."
+        }
+    },
+    "models": {
+        "supported_families": [
+            "gpt-4",
+            "claude-3-sonnet",
+            "phi-3-local"
+        ]
+    }
+}

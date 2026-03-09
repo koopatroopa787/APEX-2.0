@@ -1,0 +1,79 @@
+{
+    "project_name": "APEX Platform",
+    "readiness_score": 88,
+    "status": "GREEN",
+    "historical_queries": [
+        {
+            "time": "10:00",
+            "gpt4": 1500,
+            "sonnet": 300,
+            "phi3_local": 4000
+        },
+        {
+            "time": "10:05",
+            "gpt4": 1200,
+            "sonnet": 500,
+            "phi3_local": 4800
+        },
+        {
+            "time": "10:10",
+            "gpt4": 1800,
+            "sonnet": 900,
+            "phi3_local": 4100
+        },
+        {
+            "time": "10:15",
+            "gpt4": 900,
+            "sonnet": 400,
+            "phi3_local": 6000
+        },
+        {
+            "time": "10:20",
+            "gpt4": 500,
+            "sonnet": 300,
+            "phi3_local": 6500
+        }
+    ],
+    "agent_nodes": [
+        {
+            "id": "MetaOrchestrator",
+            "group": 1
+        },
+        {
+            "id": "CostOrchestrator",
+            "group": 2
+        },
+        {
+            "id": "QueryIntelligence",
+            "group": 2
+        },
+        {
+            "id": "WorkloadVision",
+            "group": 2
+        }
+    ],
+    "agent_links": [
+        {
+            "source": "MetaOrchestrator",
+            "target": "CostOrchestrator",
+            "value": 5
+        },
+        {
+            "source": "MetaOrchestrator",
+            "target": "QueryIntelligence",
+            "value": 5
+        },
+        {
+            "source": "WorkloadVision",
+            "target": "MetaOrchestrator",
+            "value": 8
+        }
+    ],
+    "alerts": [
+        {
+            "id": 1,
+            "msg": "Cost spike predicted in next 2 hrs. Routing to phi-3-local.",
+            "severity": "Medium"
+        }
+    ]
+}

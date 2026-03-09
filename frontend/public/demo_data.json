@@ -1,0 +1,70 @@
+{
+    "current_metrics": {
+        "active_agents": 5,
+        "db_load": 42,
+        "cost_savings_usd": 12450
+    },
+    "readiness_score": 94,
+    "status": "GREEN",
+    "historical_queries": [
+        {
+            "time": "12:00",
+            "gpt4": 85,
+            "sonnet": 60,
+            "phi3_local": 30
+        },
+        {
+            "time": "12:10",
+            "gpt4": 88,
+            "sonnet": 62,
+            "phi3_local": 35
+        },
+        {
+            "time": "12:20",
+            "gpt4": 82,
+            "sonnet": 58,
+            "phi3_local": 28
+        },
+        {
+            "time": "12:30",
+            "gpt4": 90,
+            "sonnet": 65,
+            "phi3_local": 40
+        },
+        {
+            "time": "12:40",
+            "gpt4": 87,
+            "sonnet": 61,
+            "phi3_local": 32
+        },
+        {
+            "time": "12:50",
+            "gpt4": 92,
+            "sonnet": 68,
+            "phi3_local": 45
+        },
+        {
+            "time": "13:00",
+            "gpt4": 85,
+            "sonnet": 55,
+            "phi3_local": 30
+        }
+    ],
+    "alerts": [
+        {
+            "id": "1",
+            "msg": "QUERY_ROUTING_STABLE",
+            "timestamp": "13:00:05"
+        },
+        {
+            "id": "2",
+            "msg": "NODE_04_RESYNC_SUCCESS",
+            "timestamp": "13:00:10"
+        },
+        {
+            "id": "3",
+            "msg": "ANOMALY_FILTER_ACTIVE",
+            "timestamp": "13:00:15"
+        }
+    ]
+}

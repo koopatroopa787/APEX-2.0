@@ -1,0 +1,33 @@
+# Core
+fastapi==0.109.0
+uvicorn==0.27.0
+pydantic==2.8.2
+python-dotenv==1.0.0
+
+# RL & ML
+torch>=2.2.0
+stable-baselines3>=2.2.1
+gymnasium>=0.29.1
+numpy>=1.26.0
+pandas>=2.1.4
+
+# Computer Vision
+opencv-python==4.9.0.80
+Pillow==10.2.0
+
+# Azure & Microsoft
+azure-identity==1.15.0
+azure-mgmt-monitor==6.0.2
+azure-cosmos==4.5.1
+semantic-kernel>=0.9.0
+pyautogen>=0.2.0
+
+# Observability
+opentelemetry-api==1.22.0
+opentelemetry-sdk==1.22.0
+opentelemetry-instrumentation-fastapi==0.43b0
+
+# API & Utils
+httpx==0.26.0
+aiohttp==3.9.1
+websockets==12.0

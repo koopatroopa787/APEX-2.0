@@ -1,0 +1,45 @@
+{
+    "mcp_version": "1.0",
+    "servers": {
+        "azure_monitor": {
+            "description": "Provides Azure Monitor metrics via MCP tools.",
+            "tools": [
+                "get_metrics",
+                "query_logs",
+                "get_alerts"
+            ]
+        },
+        "cost_management": {
+            "description": "Provides Azure Cost Management insights.",
+            "tools": [
+                "get_spending",
+                "forecast_costs",
+                "analyze_trends"
+            ]
+        },
+        "foundry": {
+            "description": "Provides access to Microsoft Foundry capabilities.",
+            "tools": [
+                "list_models",
+                "route_query",
+                "get_deployment_info"
+            ]
+        },
+        "database": {
+            "description": "Cosmos DB insights server.",
+            "tools": [
+                "query_workloads",
+                "get_agent_stats",
+                "analyze_patterns"
+            ]
+        },
+        "alerts": {
+            "description": "Notification and incident management server.",
+            "tools": [
+                "send_slack_alert",
+                "create_incident",
+                "notify_team"
+            ]
+        }
+    }
+}
