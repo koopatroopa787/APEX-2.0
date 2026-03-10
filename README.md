@@ -85,26 +85,73 @@ APEX isn't just a static router; it employs a **Tri-Agent RL Engine** to self-op
 
 ---
 
+## 🧪 Detailed Features
+
+### 1. Live Performance Telemetry
+<img src="assets/image2.png" alt="Live Telemetry Metrics" width="100%">
+The dashboard features dynamic, panning Recharts visualizations that track actual millisecond data from live Azure OpenAI calls, resource saturation, and cumulative cost savings achieved by the AI Cost Router.
+
+### 2. Deep-Dive Observability (Thought Streams)
+<img src="assets/image1.png" alt="Agent Detailed Terminal" width="100%">
+By clicking any agent, users view the pop-up **Agent Detail Modal**. This features a live **Thought Stream**—a scrolling terminal showing raw, sub-second logs of API calls and internal decision-making.
+
+---
+
 ## 📂 Project Structure
 
 ```text
 apex-platform/
-├── agents/                 # core RL agents and logic
-│   ├── meta_orchestrator/  # supervisor and coordinator
-│   ├── query_intelligence/ # semantic optimization
-│   ├── cost_orchestrator/  # smart model routing
-│   └── production_readiness/ # actuarial risk scoring
-├── mcp_servers/            # standardized service connectors
+├── agents/                 # Core RL agents and logic
+│   ├── meta_orchestrator/  # Supervisor and coordinator
+│   ├── query_intelligence/ # Semantic optimization
+│   ├── cost_orchestrator/  # Smart model routing
+│   └── production_readiness/ # Actuarial risk scoring
+├── mcp_servers/            # Standardized service connectors
 │   ├── foundry_server.py   # Azure AI Foundry interface
 │   ├── monitor_server.py   # Azure Monitor / OTel integration
 │   └── database_server.py  # Cosmos DB tool access
-├── integrations/           # platform glue code
+├── integrations/           # Platform glue code
 │   ├── agent_framework.py  # Semantic Kernel & AutoGen setup
-│   ├── cosmos_db.py        # persistent memory layer
+│   ├── cosmos_db.py        # Persistent memory layer
 │   └── opentelemetry_config.py # OTel instrumentation
 ├── api/                    # FastAPI endpoints & WebSockets
 ├── frontend/               # React + TS Dashboard
-└── scripts/                # training & simulation tools
+└── scripts/                # Training & simulation tools
+```
+
+---
+
+## 🛠️ Setup & Installation
+
+### Environment Configuration
+Create a `.env` file in the root directory:
+```env
+# Microsoft Cloud Configuration
+AZURE_OPENAI_ENDPOINT=https://your-resource.services.ai.azure.com/
+AZURE_OPENAI_API_KEY=your_key
+AZURE_OPENAI_DEPLOYMENT_GPT4=grok-4-1-fast-reasoning
+
+# Infrastructure
+COSMOS_DB_ENDPOINT=https://your-cosmos.documents.azure.com:443/
+COSMOS_DB_KEY=your_cosmos_key
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/...
+```
+
+### Execution Flow
+
+**Terminal 1: Backend (Python)**
+```bash
+python -m venv venv
+source venv/bin/activate  # venv\Scripts\activate on Windows
+pip install -r requirements.txt
+uvicorn api.main:app --port 8000 --reload
+```
+
+**Terminal 2: Frontend (React)**
+```bash
+cd frontend
+npm install
+npm start
 ```
 
 ---
@@ -125,18 +172,6 @@ By implementing APEX, organizations achieve:
 - **Agentic Chaos Engineering**: A dedicated agent that injects synthetic latency spikes to train other agents in high-resilience handling.
 - **Voice-Native Control Plane**: Direct WebSocket integration for real-time voice-to-agent command streaming.
 - **Multi-Cloud MCP Mesh**: Extending the MCP registry to orchestrate tools across Azure, AWS, and GCP simultaneously.
-
----
-
-## 🛠️ Quick Start
-
-```bash
-# 1. Start Backend
-uvicorn api.main:app --port 8000 --reload
-
-# 2. Start Dashboard
-cd frontend && npm start
-```
 
 ---
 
