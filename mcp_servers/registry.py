@@ -1,5 +1,5 @@
 import logging
-from typing import Dict, Any, Optional
+from typing import Dict, Any, List, Optional
 from mcp_servers.base_server import BaseMCPServer
 from mcp_servers.azure_monitor_server import AzureMonitorServer
 from mcp_servers.cost_management_server import CostManagementServer
